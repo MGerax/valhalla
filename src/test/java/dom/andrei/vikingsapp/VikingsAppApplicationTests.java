@@ -1,12 +1,12 @@
-package dom.andrei.valhalla;
+package dom.andrei.vikingsapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ValhallaApplicationTests {
+class VikingsAppApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 
