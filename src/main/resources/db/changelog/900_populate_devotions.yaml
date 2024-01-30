@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 900
+      author: aastashchanka
+      changes:
+        - insert:
+            tableName: devotions
+            columns:
+              - column:
+                  name: name
+                  value: Gods
+        - insert:
+            tableName: devotions
+            columns:
+              - column:
+                  name: name
+                  value: Axe
+        - insert:
+            tableName: devotions
+            columns:
+              - column:
+                  name: name
+                  value: Bow

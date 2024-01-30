@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: aastashchanka
+      changes:
+        - createTable:
+            tableName: villages
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: population
+                  type: int
+        - createTable:
+            tableName: vikings
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: nickname
+                  type: varchar(255)
+              - column:
+                  name: birthday
+                  type: date
+              - column:
+                  name: parent_id
+                  type: int
+              - column:
+                  name: village_id
+                  type: int
+                  constraints:
+                    foreignKeyName: viking_village_fk
+        - addForeignKeyConstraint:
+            baseTableName: vikings
+            baseColumnNames: village_id
+            referencedTableName: villages
+            referencedColumnNames: id
+            constraintName: viking_village_fk

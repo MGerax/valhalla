@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: 901
+      author: aastashchanka
+      changes:
+        - insert:
+            tableName: villages
+            columns:
+              - column:
+                  name: name
+                  value: Axewood
+              - column:
+                  name: population
+                  value: 250
+        - insert:
+            tableName: villages
+            columns:
+              - column:
+                  name: name
+                  value: Frostholm
+              - column:
+                  name: population
+                  value: 100
+        - insert:
+            tableName: villages
+            columns:
+              - column:
+                  name: name
+                  value: Ironpeak
+        - insert:
+            tableName: villages
+            columns:
+              - column:
+                  name: name
+                  value: Kattegad
+              - column:
+                  name: population
+                  value: 100

@@ -1,0 +1,77 @@
+databaseChangeLog:
+  - changeSet:
+      id: 902
+      author: aastashchanka
+      changes:
+        - insert:
+            tableName: vikings
+            columns:
+              - column:
+                  name: name
+                  value: Ragnar Lodbrok
+              - column:
+                  name: nickname
+                  value: Ironfist
+              - column:
+                  name: birthday
+                  value: "810-01-20"
+              - column:
+                  name: village_id
+                  value: 4
+        - insert:
+            tableName: vikings
+            columns:
+              - column:
+                  name: name
+                  value: Rolo Lodbrok
+              - column:
+                  name: nickname
+                  value: Thunderheart
+              - column:
+                  name: birthday
+                  value: "810-02-20"
+              - column:
+                  name: village_id
+                  value: 4
+        - insert:
+            tableName: vikings
+            columns:
+              - column:
+                  name: name
+                  value: Floki
+              - column:
+                  name: nickname
+                  value: Shadowrider
+              - column:
+                  name: birthday
+                  value: "810-03-20"
+              - column:
+                  name: village_id
+                  value: 4
+        - insert:
+            tableName: vikings
+            columns:
+              - column:
+                  name: name
+                  value: Lagerda
+              - column:
+                  name: nickname
+                  value: Winterwolf
+              - column:
+                  name: birthday
+                  value: "810-04-20"
+              - column:
+                  name: village_id
+                  value: 4
+        - insert:
+            tableName: vikings
+            columns:
+              - column:
+                  name: name
+                  value: Erik Redbeard
+              - column:
+                  name: nickname
+                  value: Bearclaw
+              - column:
+                  name: birthday
+                  value: "810-05-20"
