@@ -9,10 +9,11 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "devotions")
-public class Devotion {
+@Table(name = "villages")
+public class Village {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "devotions_id_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "villages_id_seq")
     private Long id;
     private String name;
+    private Integer population;
 }

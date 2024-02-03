@@ -1,17 +1,17 @@
 package dom.andrei.vikingsapp.service;
 
 import dom.andrei.vikingsapp.controller.exception.ResourceNotFoundException;
-import dom.andrei.vikingsapp.model.Devotion;
+import dom.andrei.vikingsapp.model.Village;
 
 import java.util.Optional;
 import java.util.Set;
 
-public interface DevotionService {
-    long save(Devotion devotion);
+public interface VillageService {
+    long save(Village village);
 
-    Optional<Devotion> findById(long id);
+    Optional<Village> findById(long id);
 
-    Set<Devotion> findAll();
+    Set<Village> findAll();
 
     void delete(long id) throws ResourceNotFoundException;
 }

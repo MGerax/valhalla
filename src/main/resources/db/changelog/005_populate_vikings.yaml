@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 902
+      id: 5
       author: aastashchanka
       changes:
         - insert:
