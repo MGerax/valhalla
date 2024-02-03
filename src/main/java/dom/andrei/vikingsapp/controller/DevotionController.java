@@ -25,13 +25,15 @@ public class DevotionController {
 
     @PostMapping("devotions")
     public long save(@RequestBody DevotionSaveDTO devotionDTO) {
-        return devotionService.save(devotionDTO);
+        var devotion = new Devotion();
+        devotion.setName(devotionDTO.getName());
+        return devotionService.save(devotion);
     }
 
     @GetMapping("devotions/{id}")
     public DevotionGetDTO findById(@PathVariable long id) {
         Devotion devotion = devotionService.findById(id).orElseThrow(() ->
-            new ResourceNotFoundException(HttpStatus.NOT_FOUND, "devotion is not found"))
+            new ResourceNotFoundException(HttpStatus.NOT_FOUND, "devotion is not found"));
         return new DevotionGetDTO(devotion.getId(), devotion.getName());
     }
 
@@ -41,7 +43,7 @@ public class DevotionController {
             new DevotionGetDTO(devotion.getId(), devotion.getName())).collect(Collectors.toSet());
     }
 
-    @DeleteMapping("devotion/{id}")
+    @DeleteMapping("devotions/{id}")
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id) {
         devotionService.delete(id);
