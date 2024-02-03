@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @RequiredArgsConstructor
 public class ResourceNotFoundException extends RuntimeException {
     private final HttpStatus status;
-    private final String description;
+    private final String description; // huj
 }
