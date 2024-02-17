@@ -1,1 +1,3 @@
-rootProject.name = 'vikings'
+rootProject.name = 'valhalla'
+
+include 'vikings'
