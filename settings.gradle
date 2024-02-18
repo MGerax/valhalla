@@ -1,3 +1,5 @@
 rootProject.name = 'valhalla'
 
 include 'vikings'
+include 'battlefield'
+
